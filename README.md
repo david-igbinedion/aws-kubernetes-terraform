@@ -23,8 +23,19 @@ Manually create S3 bucket to store terraform state
 
 ### How to use
 
+ 
+Edit variables.tf to set your Region, VPC name and EKS cluster name  
+Edit versions.tf to set the name of your S3 bucket to store your terraform state file  
+
+#### To apply using CI/CD pipeline.  
 Add the following secrets to the repository settings:  
   AWS_ACCESS_KEY_ID  = <your AWS IAM access key ID>  
   AWS_SECRET_ACCESS_KEY = <your AWS IAM secret access key ID>  
-Edit variables.tf to set your Region, VPC name and EKS cluster name  
-Merge to your master branch (pipeline is triggered upon push to master branch, you can edit this in the pipeline file)
+Merge to your master branch (pipeline is triggered upon push to master branch, you can edit this in the pipeline definition file)
+
+#### To apply manually.  
+Clone the repo to your local computer.  
+At the project root, run the following:  
+  terraform init  
+  terrraform plan  
+  terraform apply
