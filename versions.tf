@@ -13,9 +13,9 @@ terraform {
   required_version = "~> 1.2.0"
 
    backend "s3" {
-       bucket = "zulu-tfstate"
-       key    = "container/terraform.tfstate"
-       region = "us-east-2"
+       bucket = "zulu-tfstate2"
+       key    = "terraform.tfstate"
+       region = "us-east-1"
    }
 
 }
