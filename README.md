@@ -37,5 +37,5 @@ Merge to your master branch (pipeline is triggered upon push to master branch, y
 Clone the repo to your local computer.  
 At the project root, run the following:  
   terraform init  
-  terrraform plan  
+  terraform plan  
   terraform apply
